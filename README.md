@@ -1,0 +1,6 @@
+# TargetAction
+Target-Action是一种比较常见的设计模式
+
+常用的UIControl标准控件（如:UIButton）就是通过这种方式传递参数的，它在对象产生某个事件的特定时刻，给一个对象发送一个消息。
+ 
+这里（Category中）用到了runtime的objc_getAssociatedObject和objc_setAssociatedObject两个运行时函数的使用，动态地向NSObject根类中添加了userInfo属性达到传递多参数的目的。
